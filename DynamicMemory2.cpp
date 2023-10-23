@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cmath>
+#include <cstdlib>
+#include <ctime>
+#include <cstring>
+#include <cctype>
+#include <unordered_map>
+#include <new>
+using namespace std;
+
+int main() {
+    int *p;
+
+    try {
+        p = new int(87);
+    }
+    catch(bad_alloc xa) {
+        cout << "Error memory\n";
+        return 1;
+    }
+
+    cout << "In adress " << p << " is value " << *p << '\n';
+    
+    delete p;
+    return 0;
+}
